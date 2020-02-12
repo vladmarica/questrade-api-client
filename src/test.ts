@@ -5,25 +5,25 @@ const REFRESH_URL = 'https://login.questrade.com/oauth2/token?grant_type=refresh
 
 
 async function getAccounts(accessToken: string): Promise<any> {
-    const response = await fetch('https://api05.iq.questrade.com/v1/accounts', {
-        method: 'GET',
-        headers: {
-            Authorization: `Bearer ${accessToken}`
-        }
-    });
+  const response = await fetch('https://api05.iq.questrade.com/v1/accounts', {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${accessToken}`
+    }
+  });
 
-    return response.json();
+  return response.json();
 }
 
 async function getAccountBalance(accountNumber: string, accessToken: string): Promise<any> {
-    const response = await fetch(`https://api05.iq.questrade.com/v1/accounts/${accountNumber}/balances`, {
-        method: 'GET',
-        headers: {
-            Authorization: `Bearer ${accessToken}`
-        }
-    });
+  const response = await fetch(`https://api05.iq.questrade.com/v1/accounts/${accountNumber}/balances`, {
+    method: 'GET',
+    headers: {
+      Authorization: `Bearer ${accessToken}`
+    }
+  });
 
-    return response.json();
+  return response.json();
 }
 
 /*
@@ -38,12 +38,14 @@ async function getAccountBalance(accountNumber: string, accessToken: string): Pr
 */
 
 (async () => {
-    const accessToken = '';
+  const accessToken = '';
+  const accounts = await getAccounts(accessToken);
 
-    const accounts = await getAccounts(accessToken);
-    console.log(JSON.stringify(accounts, null, 2));
+  console.log(
+    JSON.stringify(accounts, null, 2));
 
-    for (const account of accounts.accounts) {
-        console.log(JSON.stringify(await getAccountBalance(account.number, accessToken), null, 2));
-    }
+  for (const account of accounts.accounts) {
+    console.log(JSON.stringify(
+      await getAccountBalance(account.number, accessToken), null, 2));
+  }
 })();
