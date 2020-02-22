@@ -1,4 +1,4 @@
-# questrade-api-client <a href="https://www.npmjs.com/package/humio-winston"><img src="https://img.shields.io/npm/v/questrade-api-client.svg" alt="" />
+# questrade-api-client <a href="https://www.npmjs.com/package/questrade-api-client"><img src="https://img.shields.io/npm/v/questrade-api-client.svg" alt="" /></a>
 
 A simple Node.js client for interacting with the [Questrade REST API](https://www.questrade.com/api).
 ## Installation
