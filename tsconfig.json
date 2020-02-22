@@ -3,13 +3,15 @@
     "target": "es6",
     "module": "commonjs",
     "strict": true,
-    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "outDir": "dist"
   },
   "include": [
-    "./src/**/*.ts"
+    "src/questrade-client.ts",
+    "src/api-types.ts",
   ]
 }

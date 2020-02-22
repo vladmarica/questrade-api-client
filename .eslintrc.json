@@ -1,0 +1,36 @@
+{
+  "extends": [
+    "airbnb-typescript/base",
+    "plugin:jest/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "jest"],
+  "rules": {
+    "indent": ["error", 2],
+    "@typescript-eslint/indent": ["error", 2],
+    "max-classes-per-file": ["off"],
+    "no-underscore-dangle": ["off"],
+    "prefer-template": ["off"],
+    "class-methods-use-this": ["off"],
+    "no-plusplus": ["off"],
+    "no-bitwise": ["off"],
+    "object-curly-newline": ["off"],
+    "max-len": ["error", { "code": 120 }]
+  },
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser",
+    "project": "./tsconfig.json",
+    "ecmaFeatures": {
+      "modules": true
+    }
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "env": {
+    "jest/globals": true
+  }
+}
