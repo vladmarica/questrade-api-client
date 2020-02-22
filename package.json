@@ -1,13 +1,17 @@
 {
   "name": "questrade-api-client",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "A simple Node.js client for interacting with the Questrade REST API",
   "main": "dist/questrade-client.js",
   "types": "dist/questrade-client.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest --verbose",
     "lint": "eslint ./src/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Quintinity/questrade-api-client.git"
   },
   "author": "Vlad Marica",
   "license": "MIT",
