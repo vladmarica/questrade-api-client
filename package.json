@@ -5,11 +5,14 @@
   "main": "dist/questrade-client.js",
   "types": "dist/questrade-client.d.ts",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "test": "jest --verbose",
+    "lint": "eslint ./src/*"
   },
   "author": "Vlad Marica",
   "license": "MIT",
   "devDependencies": {
+    "@types/jest": "^25.1.3",
     "@types/nock": "^11.1.0",
     "@types/node": "^13.7.1",
     "@types/node-fetch": "^2.5.4",
