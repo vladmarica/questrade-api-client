@@ -5,9 +5,9 @@
   "main": "dist/questrade-client.js",
   "types": "dist/questrade-client.d.ts",
   "scripts": {
-    "build": "tsc",
+    "build": "tsc --project ./src/tsconfig.lib.json",
     "test": "jest --verbose",
-    "lint": "eslint ./src/*"
+    "lint": "eslint --ext '.ts' ./test ./src"
   },
   "repository": {
     "type": "git",
