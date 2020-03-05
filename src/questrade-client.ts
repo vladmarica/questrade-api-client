@@ -120,6 +120,10 @@ class QuestradeClient {
     return this._doApiRequest(`/v1/accounts/${accountNumber}/balances`);
   }
 
+  /**
+   * Returns the current refresh token for this client. May not be the same as the original
+   * refresh token passed to the constructor.
+   */
   getRefreshToken() {
     return this.refreshToken;
   }

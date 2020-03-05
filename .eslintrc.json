@@ -19,7 +19,7 @@
     "max-len": ["error", { "code": 120 }]
   },
   "parserOptions": {
-    "project": "./tsconfig.json",
+    "project": ["./src/tsconfig.lib.json", "./test/tsconfig.test.json"],
     "ecmaFeatures": {
       "modules": true
     }

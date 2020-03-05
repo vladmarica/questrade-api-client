@@ -9,7 +9,7 @@ const VALID_ACCESS_TOKEN = 'valid_access_token';
 const VALID_REFRESH_TOKEN1 = 'valid_refresh_token1';
 const VALID_REFRESH_TOKEN2 = 'valid_refresh_token2';
 
-it('with invalid refresh token', () => {
+it('with invalid refresh token', async () => {
   const client = new QuestradeClient(INVALID_ACCESS_TOKEN);
 
   expect.assertions(4);
@@ -17,7 +17,7 @@ it('with invalid refresh token', () => {
   expect(client.getAccessToken()).toBeUndefined();
   expect(client.getRefreshToken()).toBe(INVALID_ACCESS_TOKEN);
 
-  return client.getAccounts().catch(err => {
+  return client.getAccounts().catch((err) => {
     expect(err).toBeInstanceOf(QuestradeApiError);
     expect(err.message).toContain('Invalid refresh token');
   });
@@ -34,7 +34,7 @@ it('refresh tokens and query', async () => {
     });
 
   const scope2 = nock(API_SERVER_URL)
-    .get(`/v1/accounts`)
+    .get('/v1/accounts')
     .reply(200, {});
 
   const client = new QuestradeClient(VALID_REFRESH_TOKEN1);
