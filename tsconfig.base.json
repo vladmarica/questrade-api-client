@@ -9,9 +9,5 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "allowJs": true
-  },
-  "include": [
-    "src/questrade-client.ts",
-    "src/api-types.ts",
-  ],
+  }
 }
